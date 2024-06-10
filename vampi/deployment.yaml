@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: vampi
+  name: vampi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vampi
+  template:
+    metadata:
+      labels:
+        app: vampi
+    spec:
+      containers:
+        - image: erev0s/vampi:latest
+          name: vampi
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+              name: http
