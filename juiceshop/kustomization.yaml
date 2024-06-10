@@ -4,4 +4,4 @@ namespace: juiceshop
 resources:
 - namespace.yaml
 - deployment.yaml
-- servicd.yaml
+- service.yaml
