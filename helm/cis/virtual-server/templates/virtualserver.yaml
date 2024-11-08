@@ -1,0 +1,71 @@
+apiVersion: cis.f5.com/v1
+kind: VirtualServer
+metadata:
+  name:
+  namespace:
+  labels:
+    f5cr: "true"
+spec:
+  host:
+  virtualServerName: 
+  partition: 
+  virtualServerAddress: 
+  hostAliases: []
+  additionalVirtualServerAddresses: []
+    # - 10.0.0.10
+  hostGroup:
+  hostGroupVirtualServerName: 
+  tlsProfileName:
+  serviceAddress:
+    - arpEnabled: true
+      icmpEcho: enable
+      routeAdvertisement: disable
+      spanningEnabled: false
+      trafficGroup: default
+  profiles:
+    tcp:
+      client: 
+      server: 
+  httpTraffic:
+  allowVlans: []
+    # - /Common/External
+  pools:
+    - name:
+      path:
+      service:
+      serviceNamespace: 
+      servicePort:
+      loadBalancingMethod: 
+      rewrite:
+      monitors: []
+        # - type: http
+        #   send: GET /rn
+        #   recv: ""
+        #   interval: 5
+        #   timeout: 16
+      reselectTries: 5
+      serviceDownAction: reselect # drop, none, reselect, reset
+      waf: 
+  hostPersistence:
+    # sourceAddress, destinationAddress, universal, hash, carp, cookieInsert, cookieRewrite, cookiePassive, cookieHash
+    method: 
+    metaData:
+      # cookieInsert, cookieRewrite, cookiePassive, cookieHash
+      name:
+      # universal, hash, carp
+      key:
+      # sourceAddress, destinationAddress
+      netmask:
+      # sourceAddress, destinationAddress, universal, carp, hash, cookieHash
+      timeout:
+      # cookieInsert, cookieRewrite
+      expiry:
+      # cookieHash
+      offset:
+      # cookieHash
+      length:
+  allowSourceRange: []
+    # - 1.1.1.0/24
+  iRules: []
+    # - /Common/customiRule
+  profileMultiplex: 

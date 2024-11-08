@@ -1,0 +1,32 @@
+fullname: 
+host:
+alias: []
+  # - 
+ipaddress:
+  shared: false
+  group:
+  addresses: []
+    # - 
+tls:
+  server:
+    enabled:
+    secret:
+    bigip: 
+  client:
+    enabled:
+    secret:
+    bigip:
+paths: []
+  # - path:
+  #   service:
+  #   port:
+  #   monitor:
+  #   waf:
+waf:
+snat: auto
+vlan:
+redirect: true
+dos:
+botDefense:
+iRules: []
+  # - 

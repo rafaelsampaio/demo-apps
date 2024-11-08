@@ -1,0 +1,6 @@
+apiVersion: v2
+name: virtual-server
+description: A Helm chart for F5 Container Ingress Services (CIS) Virtual Server
+type: application
+version: 0.1.0
+appVersion: "2.16.1"

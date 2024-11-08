@@ -1,0 +1,64 @@
+apiVersion: cis.f5.com/v1
+kind: Policy
+metadata:
+  labels:
+    f5cr: "true"
+  name: 
+  namespace: 
+spec:
+  l7Policies:
+    waf: 
+  l3Policies:
+    allowSourceRange: []
+      # - 1.1.1.0/24
+      # - 2.2.2.0/24
+    firewallPolicy: 
+    dos: 
+    botDefense: 
+    allowVlans: []
+    ipIntelligencePolicy:
+  tcp:
+  snat:
+  autoLastHop:
+  ltmPolicies:
+    secure: 
+    insecure: 
+    priority:     
+  poolSettings:
+    reselectTries: 3
+    serviceDownAction: reselect
+    slowRampTime: 10
+  defaultPool: {}
+    service:
+    serviceNamespace:
+    servicePort:
+    loadBalancingMethod:
+    nodeMemberLabel:
+    monitors: []
+    serviceDownAction:
+    reselectTries:
+    reference:
+    name:
+  profiles:
+    tcp:
+      client: 
+      server: 
+    udp: 
+    http: 
+    http2: 
+      client: 
+      server: 
+    persistenceProfile: 
+    profileL4: 
+    profileMultiplex: 
+    logProfiles: []
+      # - /Common/Log all requests
+      # - /Common/local-dos
+    htmlProfile: 
+    analyticsProfiles:
+      http: 
+  iRules:
+    secure: 
+    insecure: 
+    priority: 
+  iRulesList: []
